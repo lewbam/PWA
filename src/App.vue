@@ -8,7 +8,7 @@
       <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
           <router-link class="material-icons" to="/post">camera_alt</router-link>
-          <span><router-link class="mdl-layout-title" id="title" to="/">Instagram</router-link></span>
+          <span><router-link class="mdl-layout-title" id="title" to="/">Jigolie</router-link></span>
           <router-link class="material-icons" id="send" style="float:right;" to="/post">send</router-link>
           
         </div>
@@ -83,7 +83,7 @@
 
   @media screen and (max-width: 1024px) {
     .mdl-layout-title {
-      padding: 0 16px 0 120px;
+      padding: 0 16px 0 140px;
   }
 
   .mdl-layout__header-row {
@@ -91,7 +91,7 @@
   }
 
   #send {
-    padding: 0 16px 0 100px;
+    padding: 0 16px 0 110px;
   }
 }
   

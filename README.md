@@ -1,7 +1,7 @@
 
 
 
-# Instagram Lite
+# Jigolie
 
 Hosted at progressivewebapp-1997.firebaseapp.com
 
