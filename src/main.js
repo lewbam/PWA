@@ -30,28 +30,28 @@ new Vue({
   components: { App }
 })
 
-// document.getElementById('getval').addEventListener('change', readURL, true);
-// function readURL(){
-//     var file = document.getElementById("getval").files[0];
-//     var reader = new FileReader();
-//     reader.onloadend = function(){
-//         document.getElementById('clock').style.backgroundImage = "url(" + reader.result + ")";
-//       }
-//     if(file){
-//         reader.readAsDataURL(file);
-//         const name = ((+new Date()) + '-' + file.name);
-//         console.log(name)
-//         const task = firebase.storage().ref().child(name).put(file, metadata);
-//         task.then((snapshot) => {
-//         const url = snapshot.downloadURL;
-//         console.log(url);
-//         document.querySelector('#someImageTagID').src = url;
-//       }).catch((error) => {
-//         console.error(error);
-//       });
-//     }else{
-//     }
-
+document.getElementById('getval').addEventListener('change', readURL, true);
+function readURL(){
+    var file = document.getElementById("getval").files[0];
+    var reader = new FileReader();
+    reader.onloadend = function(){
+        document.getElementById('clock').style.backgroundImage = "url(" + reader.result + ")";
+      }
+    if(file){
+        reader.readAsDataURL(file);
+        var name = file.name
+        console.log(name)
+        // const task = firebase.storage().ref().child(name).put(file, metadata);
+        // task.then((snapshot) => {
+        // const url = snapshot.downloadURL;
+        // console.log(url);
+        // document.querySelector('#someImageTagID').src = url;
+      // }).catch((error) => {
+      //   console.error(error);
+      // });
+    }else{
+    }
+  }
 // function upload(){
 //     const ref = firebase.storage().ref();
 //     const file = document.getElementById('getval').files[0]
