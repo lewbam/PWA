@@ -1,7 +1,3 @@
-<style>
-  
-
-</style>
 
 <template>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -78,21 +74,79 @@
   }
 
   .mdl-mega-footer .nav {
-    padding: 0px 27px 0px 27px;
-  }
-
-  @media screen and (max-width: 1024px) {
-    .mdl-layout-title {
-      padding: 0 16px 0 140px;
+    padding: 0 8% 0 8%;
   }
 
   .mdl-layout__header-row {
-      padding: 0 16px 0 10px;
+      padding: 0 0% 0 3%;
   }
 
   #send {
-    padding: 0 16px 0 110px;
+    padding: 0 5% 0 82%;
   }
+
+  .mdl-layout-title {
+      margin-left: 430%;
+  }
+
+  @media screen and (min-width: 1023px) {
+    .mdl-layout-title {
+      margin-left: 565%;
+  }
+
+    .mdl-mega-footer .nav {
+    padding: 0 8.5% 0 8.5%;
+  }
+
+  .mdl-layout__header-row {
+      padding: 0 5% 0 5%;
+  }
+
+  #send {
+    padding: 0 5% 0 89%;
+  }
+
+}
+
+  @media screen and (max-width: 414px) and (min-width: 367px) {
+    .mdl-layout-title {
+      margin-left: 170%;
+  }
+
+    .mdl-mega-footer .nav {
+    padding: 0 6.3% 0 6.3%;
+  }
+
+  .mdl-layout__header-row {
+      padding: 0 5% 0 5%;
+  }
+
+  #send {
+    padding: 0 5% 0 69%;
+  }
+
+  .mdl-mega-footer .nav {
+    padding: 0 6.3% 0 6.3%;
+  }
+}
+
+@media screen and (max-width: 367px) {
+  .mdl-layout-title {
+      margin-left: 150%;
+  }
+
+    .mdl-mega-footer .nav {
+    padding: 0 6% 0 6%;
+  }
+
+  .mdl-layout__header-row {
+      padding: 0 5% 0 5%;
+  }
+
+  #send {
+    padding: 0 5% 0 65%;
+  }
+  
 }
   
 body {
