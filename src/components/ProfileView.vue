@@ -23,7 +23,7 @@
   color: #555;
 }
 
-#clock{
+#clock {
 background-image:url('');
 background-size:cover;
 background-position: center;
