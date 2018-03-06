@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import HomeView from '@/components/HomeView'
 import DetailView from '@/components/DetailView'
 import PostView from '@/components/PostView'
+import ProfileView from '@/components/ProfileView'
 
 Vue.use(Router)
 
@@ -22,6 +23,11 @@ export default new Router({
       path: '/post',
       name: 'post',
       component: PostView
+    },
+    {
+      path: '/profile',
+      name: 'profile',
+      component: ProfileView
     }
   ]
 })

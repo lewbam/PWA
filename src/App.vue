@@ -23,7 +23,7 @@
             <router-link class="material-icons nav" to="">search</router-link>
             <router-link class="material-icons nav" to="/post">add</router-link>
             <router-link class="material-icons nav" to="">favorite_border</router-link>
-            <router-link class="material-icons nav" to="">account_circle</router-link>
+            <router-link class="material-icons nav" to="/profile">account_circle</router-link>
         </footer>
     </div>
   </template>
@@ -124,10 +124,6 @@
   #send {
     padding: 0 5% 0 69%;
   }
-
-  .mdl-mega-footer .nav {
-    padding: 0 6.3% 0 6.3%;
-  }
 }
 
 @media screen and (max-width: 367px) {
@@ -146,6 +142,26 @@
   #send {
     padding: 0 5% 0 65%;
   }
+  
+}
+
+ @media screen and (max-width: 767px) and (min-width: 414px) {
+    .mdl-layout-title {
+      margin-left: 170%;
+  }
+
+    .mdl-mega-footer .nav {
+    padding: 0 6.2% 0 6.2%;
+  }
+
+  .mdl-layout__header-row {
+      padding: 0 5% 0 5%;
+  }
+
+  #send {
+    padding: 0 5% 0 69%;
+  }
+
   
 }
   

@@ -2,11 +2,11 @@
 <template>
         <form>
           <div class="mdl-grid">
-            <div class="mdl-cell mdl-cell--8-col">
+            <div class="mdl-cell mdl-cell--12-col">
               <div id='clock'></div>
             </div>
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet" id="upload">
-              <input type='file' id='getval'/>
+            <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet" id="upload">
+              <input type='file' id='getval'/><br>
               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded is-dirty">
                 <input id="username" v-model="title" type="text" class="mdl-textfield__input"/>
                 <label for="username" class="mdl-textfield__label">Describe me</label>
