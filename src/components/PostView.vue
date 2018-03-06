@@ -13,10 +13,14 @@
           <input id="username" v-model="title" type="text" class="mdl-textfield__input"/>
           <label for="username" class="mdl-textfield__label">Describe me</label>
         </div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded is-dirty">
+          <input id="name" v-model="name" type="text" class="mdl-textfield__input"/>
+          <label for="name" class="mdl-textfield__label">What's your name?</label>
+        </div>
         <div class="actions">
-          <a @click.prevent="postImage" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-            POST A CAT
-          </a>
+          <button @click.prevent="postImage" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect">
+            <i class="material-icons">add</i>
+          </button>
         </div>
       </div>
     </div>
@@ -24,16 +28,21 @@
 </template>
 
 <script>
-import parse from 'xml-parser'
+  import axios from 'axios'
+// import parse from 'xml-parser'
 export default {
   data () {
     return {
-      'postUrl': null
+      'postUrl': null,
+      'title': null,
+      'name': null
+
     }
   },
   mounted () {
-    this.$http.get('https://thecatapi.com/api/images/get?format=xml&results_per_page=1').then(response => {
-      this.postUrl = parse(response.body).root.children['0'].children['0'].children['0'].children['0'].content
+    axios.get('https://dog.ceo/api/breeds/image/random').then(response => {
+      console.log(response.data.message)
+      this.postUrl = response.data.message
     })
   },
   methods: {
@@ -42,7 +51,7 @@ export default {
     {
       'url': this.postUrl,
       'comment': this.title,
-      'info': 'Posted by Charles on Tuesday',
+      'info': 'Posted by ' + this.name + ' on Tuesday',
       'created_at': -1 * new Date().getTime()
     })
     .then(this.$router.push('/'))
