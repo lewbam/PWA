@@ -8,6 +8,16 @@ var config = {
  messagingSenderId: "124917557296"
 }
 firebase.initializeApp(config)
+firebase.auth().onAuthStateChanged(function(user) {
+    if (!app) {
+        app = new Vue({
+            el: '#app',
+            template: '<App/>',
+            components: { App },
+            router
+        })
+    }
+});
 
 export default {
  database: firebase.database(),

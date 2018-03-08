@@ -20,7 +20,7 @@
       </main>
         <footer class="mdl-mega-footer">
             <router-link class="material-icons nav" to="/">home</router-link>
-            <router-link class="material-icons nav" to="">search</router-link>
+            <router-link class="material-icons nav" to="/search">search</router-link>
             <router-link class="material-icons nav" to="/post">add</router-link>
             <router-link class="material-icons nav" to="">favorite_border</router-link>
             <router-link class="material-icons nav" to="/profile">account_circle</router-link>
@@ -54,6 +54,7 @@
     font-size: 25px;
     text-decoration: none;
     margin-bottom: 15px;
+    margin-left: 350%;
   }
 
   .material-icons {
@@ -77,21 +78,18 @@
     padding: 0 8% 0 8%;
   }
 
-  .mdl-layout__header-row {
-      padding: 0 0% 0 3%;
-  }
+  /* .mdl-layout__header-row {
+      padding: 0 9% 0 3%;
+  } */
 
   #send {
     padding: 0 5% 0 82%;
   }
+  
 
-  .mdl-layout-title {
-      margin-left: 430%;
-  }
-
-  @media screen and (min-width: 1023px) {
-    .mdl-layout-title {
-      margin-left: 565%;
+  @media screen and (min-width: 1022px) {
+    #title {
+      margin-left: 600%;
   }
 
     .mdl-mega-footer .nav {
@@ -109,7 +107,7 @@
 }
 
   @media screen and (max-width: 414px) and (min-width: 367px) {
-    .mdl-layout-title {
+    #title {
       margin-left: 170%;
   }
 
@@ -127,7 +125,7 @@
 }
 
 @media screen and (max-width: 367px) {
-  .mdl-layout-title {
+  #title {
       margin-left: 150%;
   }
 
@@ -146,7 +144,7 @@
 }
 
  @media screen and (max-width: 767px) and (min-width: 414px) {
-    .mdl-layout-title {
+    #title {
       margin-left: 170%;
   }
 

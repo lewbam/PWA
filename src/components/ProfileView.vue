@@ -8,10 +8,28 @@
             <button class="mdl-button mdl-js-button mdl-button--raised">
                 Follow
             </button>
+            <button v-on:click="logout" class="mdl-button mdl-js-button mdl-button--raised">
+                Log out
+            </button>
         </div>
       </div>
     </form>
   </template>
+
+<script>
+  import firebase from 'firebase'
+
+  export default {
+    name: 'profile',
+    methods: {
+      logout: function() {
+        firebase.auth().signOut().then(() => {
+          this.$router.replace('login')
+        })
+      }
+    }
+  }
+</script>
      
 <style scoped>
   .picture > img {
