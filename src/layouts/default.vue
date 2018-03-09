@@ -217,7 +217,7 @@ header span {
 }
 
 .page-enter-active, .page-leave-active {
-  transition: opacity 1s, transform 1s;
+  transition: opacity 0.5s, transform 0.5s;
 }
 .page-enter, .page-leave-to {
   opacity: 0;

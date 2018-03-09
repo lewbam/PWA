@@ -19,7 +19,7 @@
       <router-link to="/home">
       <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" v-on:click="signIn">Sign In</button>
       </router-link>
-      <p style="color: white;">You don't have an account? <router-link to="/sign-up">Sign up now</router-link></p>
+      <p style="color: white;">Don't have an account? <router-link to="/sign-up">Sign up now</router-link></p>
     </div>
 </template>
 
@@ -94,6 +94,7 @@
   p a {
     text-decoration: underline;
     cursor: pointer;
+    color: #84baf2;
   }
 
   #login-title {
@@ -117,6 +118,9 @@
     background-color: white;
   }
 
+  button:hover {
+    background-color: #84baf2;
+  }
   @media screen and (max-width: 1024px) {
     .login {
     background-image: url("https://images.unsplash.com/photo-1465588042420-47a53c2d0320?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a92c4e3580094ddd156079701920b260&auto=format&fit=crop&w=1395&q=80");

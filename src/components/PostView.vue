@@ -3,12 +3,12 @@
 <template>
   <form>
     <div class="mdl-grid">
-      <div class="mdl-cell mdl-cell--8-col">
+      <div class="mdl-cell mdl-cell--12-col">
         <div class="card-image__picture">
           <img :src="this.postUrl"/>
         </div>
       </div>
-      <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet">
+      <div class="mdl-cell mdl-cell--12-col">
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded is-dirty">
           <input id="username" v-model="title" type="text" class="mdl-textfield__input"/>
           <label for="username" class="mdl-textfield__label">Describe me</label>

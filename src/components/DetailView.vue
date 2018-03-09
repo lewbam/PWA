@@ -1,6 +1,6 @@
 <template>
         <div class="mdl-grid">
-          <div class="mdl-cell mdl-cell--8-col">
+          <div class="mdl-cell mdl-cell--12-col">
             <div class="picture">
               <img :src="post.url" />
             </div>
@@ -8,7 +8,7 @@
               <span>{{ post.info }}</span>
             </div>
           </div>
-          <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet">
+          <div class="mdl-cell mdl-cell--12-col">
             <div class="comment">
               <span>{{ post.comment }}</span>
             </div>
