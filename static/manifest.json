@@ -1,8 +1,8 @@
 {
   "name": "Jigolie",
   "short_name": "Jigolie",
-  "theme_color": "#d7d7d7",
-  "background_color": "#ffffff",
+  "theme_color": "#2196f3",
+  "background_color": "#2196f3",
   "display": "standalone",
   "orientation": "portrait",
   "Scope": "/",
