@@ -1,9 +1,17 @@
 <template>
     <div class="sign-up">
-        <p>Create a new account!</p>
-        <input type="text" v-model="email" placeholder="Email"><br>
-        <input type="password" v-model="password" placeholder="Password"><br>
-        <button v-on:click="signUp">Sign Up</button>
+        <h1 id="login-title">Sign up</h1>
+        <form action="#">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" id="email" type="text" v-model="email">
+            <label class="mdl-textfield__label" for="email">Email</label>
+          </div><br>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" id="password" type="password" v-model="password">
+            <label class="mdl-textfield__label" for="password">Password</label>
+          </div><br>
+        </form>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" v-on:click="signUp">Sign Up</button>
         <span>Go back to <router-link to="/login">Login</router-link></span>
     </div>
 </template>
@@ -38,11 +46,6 @@
   .signUp {
     margin-top: 40px;
   }
-  input {
-    margin: 10px 0;
-    width: 20%;
-    padding: 15px;
-  }
   button {
     margin-top: 10px;
     width: 10%;
@@ -52,5 +55,11 @@
     display: block;
     margin-top: 20px;
     font-size: 11px;
+  }
+
+  #login-title {
+    font-weight: lighter;
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
   }
 </style>

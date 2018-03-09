@@ -1,7 +1,7 @@
 
 <template>
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-      <header class="mdl-layout__header">
+    <div id="app" class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header" >
         <div class="mdl-layout__header-row">
           <router-link class="material-icons" to="/post">camera_alt</router-link>
           <span><router-link class="mdl-layout-title" id="title" to="/">Jigolie</router-link></span>
@@ -31,12 +31,8 @@
 <script>
   require('material-design-lite')
   export default {
-  name: 'app',
+  name: 'default',
   methods: {
-    hideMenu: function () {
-      document.getElementsByClassName('mdl-layout__drawer')[0].classList.remove('is-visible')
-      document.getElementsByClassName('mdl-layout__obfuscator')[0].classList.remove('is-visible')
-    }
   }
 }
 </script>
@@ -45,6 +41,13 @@
   @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
   @import url('https://code.getmdl.io/1.2.1/material.blue-red.min.css');
   @import url('https://fonts.googleapis.com/css?family=Lobster');
+
+  .mdl-grid {
+    margin-top: 50px;
+    z-index: -999;
+    bottom: 0;
+    top: 0;
+  }
 
   #title {
     font-weight: lighter;
@@ -64,6 +67,7 @@
 
   .mdl-layout__header {
     background-color: white !important;
+    /* position: fixed; */
   }
 
   .mdl-mega-footer {
@@ -71,6 +75,10 @@
     box-shadow: 0 -5px 5px -5px #333;
     padding: 10px 0px;
     padding-top: 14px;
+    position: fixed;
+    z-index: 999 !important;
+    bottom: 0px !important;
+    width: 100%;
 
   }
 
@@ -164,7 +172,7 @@
 }
   
 body {
-  margin: 0;
+  margin:0;
 }
 
 #app {
@@ -185,6 +193,9 @@ header {
   padding: 0 16px 0 24px;
   background-color: #35495E;
   color: #ffffff;
+  position: fixed;
+  top: 0;
+  z-index: 999;
 }
 
 header span {

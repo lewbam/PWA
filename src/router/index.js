@@ -11,7 +11,6 @@ import SignUp from '@/components/SignUp'
 import firebase from 'firebase'
 
 Vue.use(Router)
-
 let router = new Router({
   routes: [
     {
@@ -25,19 +24,26 @@ let router = new Router({
     {
       path: '/sign-up',
       name: 'SignUp',
-      component: SignUp
+      component: SignUp,
+      meta: {
+        layout: 'layoutLogin' // name of the layout
+      }
     },
     {
       path: '/login',
       name: 'login',
-      component: Login
+      component: Login,
+      meta: {
+        layout: 'layoutLogin' // name of the layout
+      }
     },
     {
       path: '/home',
       name: 'home',
       component: HomeView,
       meta: {
-        requiresAuth: true
+        requiresAuth: true,
+        layout: 'default'
       }
     },
     {
@@ -45,7 +51,8 @@ let router = new Router({
       name: 'detail',
       component: DetailView,
       meta: {
-        requiresAuth: true
+        requiresAuth: true,
+        layout: 'default'
       }
     },
     {
@@ -53,7 +60,8 @@ let router = new Router({
       name: 'post',
       component: PostView,
       meta: {
-        requiresAuth: true
+        requiresAuth: true,
+        layout: 'default'
       }
     },
     {
@@ -61,7 +69,8 @@ let router = new Router({
       name: 'profile',
       component: ProfileView,
       meta: {
-        requiresAuth: true
+        requiresAuth: true,
+        layout: 'default'
       }
     },
     {
@@ -69,7 +78,8 @@ let router = new Router({
       name: 'search',
       component: SearchView,
       meta: {
-        requiresAuth: true
+        requiresAuth: true,
+        layout: 'default'
       }
     }
   ]

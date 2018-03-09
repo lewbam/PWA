@@ -17,7 +17,7 @@ firebase.auth().onAuthStateChanged(function(user) {
             router
         })
     }
-});
+})
 
 export default {
  database: firebase.database(),
