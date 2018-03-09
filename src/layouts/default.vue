@@ -13,7 +13,7 @@
       
       <main class="mdl-layout__content">
         <div class="page-content">
-          <transition name="fade">
+          <transition name="page" mode="in-out">
             <router-view></router-view>
           </transition>
         </div>
@@ -214,5 +214,13 @@ header span {
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
+}
+
+.page-enter-active, .page-leave-active {
+  transition: opacity 1s, transform 1s;
+}
+.page-enter, .page-leave-to {
+  opacity: 0;
+  transform: translateX(-30%);
 }
 </style>
