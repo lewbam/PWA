@@ -1,10 +1,11 @@
+// Dummy data used in early development stages - JSON formatted
 export default {
     pictures: [
       {
-        'id': 0,
-        'url': 'https://25.media.tumblr.com/tumblr_m40h4ksiUa1qbyxr0o1_400.gif',
-        'comment': 'A cat game',
-        'info': 'Posted by Kevin on Friday'
+        'id': 0, //ID assigned to each array
+        'url': 'https://25.media.tumblr.com/tumblr_m40h4ksiUa1qbyxr0o1_400.gif', //URL to image
+        'comment': 'A cat game', //Comment to be displayed
+        'info': 'Posted by Kevin on Friday' //Info to be displayed
       },
       {
         'id': 1,

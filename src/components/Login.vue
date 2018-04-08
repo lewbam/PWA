@@ -8,22 +8,23 @@
       <h3 id="login-title" style="font-size:35px; color:white;">Jigolie</h3>
       <form action="#">
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" style="color:white;" id="email" type="text" v-model="email">
-          <label class="mdl-textfield__label" style="color:white;" for="email">Email</label>
+          <input class="mdl-textfield__input" style="color:white;" id="email" type="text" v-model="email"> <!-- V-model allows two way data binding -->
+          <label class="mdl-textfield__label" style="color:white;" for="email">Email</label> 
         </div><br>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
           <input class="mdl-textfield__input" style="color:white;" id="password" type="password" v-model="password">
           <label class="mdl-textfield__label" style="color:white;" for="password">Password</label>
         </div><br>
       </form>
-      <router-link to="/home">
-      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" v-on:click="signIn">Sign In</button>
+      <router-link to="/home"> <!-- on button click, change route to home. (will only work if user is authenticated, based on router rules) -->
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" v-on:click="signIn">Sign In</button> <!-- on click, run function 'signIn' -->
       </router-link>
-      <p style="color: white;">Don't have an account? <router-link to="/sign-up">Sign up now</router-link></p>
+      <p style="color: white;">Don't have an account? <router-link to="/sign-up">Sign up now</router-link></p> <!-- if link is clicked changed route to '/sign-up'-->
     </div>
 </template>
 
 <script>
+// Import Components and Node Modules
   import firebase from 'firebase'
   import Vue from 'vue'
   import router from '../router'
@@ -31,19 +32,19 @@
   export default {
     name: 'login',
     data: function() {
-      return {
-        email: '',
+      return { // Set email and password to empty
+        email: '', 
         password: ''
       }
     },
     methods: {
       signIn: function() {
-        firebase.auth().signInWithEmailAndPassword(this.email, this.password).then(
-          function(user) {
+        firebase.auth().signInWithEmailAndPassword(this.email, this.password).then( //if username and password match records within firebase databae -->
+          function(user) { // change route to home screen
             // this.$router.replace('home')
             // // alert('Logged in')
           },
-          function(err) {
+          function(err) { // If not, display firebase provided error message as alert
             alert('Oops. ' + err.message)
           }
         );
@@ -130,6 +131,10 @@
     right:0;
     top: 0;
     bottom: 0;
+  }
+
+  video {
+    display: none;
   }
 
   }

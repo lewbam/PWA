@@ -1,39 +1,39 @@
 
 <template>
-        <div>
-          <div class="mdl-grid">
-            <div class="mdl-cell mdl-cell--3-col mdl-cell mdl-cell--1-col-tablet mdl-cell--hide-phone"></div>
-            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone">
-              <div v-for="picture in this.$root.post" class="image-card" @click="displayDetails(picture['.key'])">
-                <div class="image-card__picture">
-                  <img :src="picture.url" />
-                </div>
-                <div class="image-card__comment mdl-card__actions">
-                  <span>{{ picture.comment }}</span>
-                </div>
-              </div>
-            </div>
+  <div>
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--3-col mdl-cell mdl-cell--1-col-tablet mdl-cell--hide-phone"></div>
+      <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone">
+        <div v-for="picture in this.$root.post" class="image-card" @click="displayDetails(picture['.key'])"> <!-- For loop to loop through images in array from Firebase -->
+          <div class="image-card__picture">
+            <img :src="picture.url" /> <!-- assign image url from array -->
+          </div>
+          <div class="image-card__comment mdl-card__actions">
+            <span>{{ picture.comment }}</span> <!-- assign image comment from array -->
           </div>
         </div>
-      </template>
+      </div>
+    </div>
+  </div>
+</template>
 
 
 
 <script>
-        import data from '../data'
-        export default {
-          methods: {
-            displayDetails (id) {
-              this.$router.push({name: 'detail', params: { id: id }})
-            }
-          },
-          data () {
-            return {
-              'pictures': data.pictures
-            }
-          }
-        }
-      </script>
+  import data from '../data' //importing dummy data (no longer used)
+  export default {
+    methods: {
+      displayDetails (id) {
+        this.$router.push({name: 'detail', params: { id: id }}) //change route to 'detail view' on click, content displayed on there will be based on ID provided on click.
+      }
+    },
+    data () {
+      return {
+        'pictures': data.pictures // return pictures from firebase in array
+      }
+    }
+  }
+</script>
 
 
 <style scoped>

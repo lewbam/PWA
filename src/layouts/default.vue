@@ -1,35 +1,38 @@
 
 <template>
-    <div id="app" class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-      <header class="mdl-layout__header" >
-        <div class="mdl-layout__header-row">
-          <router-link class="material-icons" to="/post">camera_alt</router-link>
-          <span><router-link class="mdl-layout-title" id="title" to="/">Jigolie</router-link></span>
-          <router-link class="material-icons" id="send" style="float:right;" to="/post">send</router-link>
-          
-        </div>
-        
-      </header>
-      
-      <main class="mdl-layout__content">
-        <div class="page-content">
-          <transition name="page" mode="in-out">
-            <router-view></router-view>
-          </transition>
-        </div>
-      </main>
-        <footer class="mdl-mega-footer">
-            <router-link class="material-icons nav" to="/">home</router-link>
-            <router-link class="material-icons nav" to="/search">search</router-link>
-            <router-link class="material-icons nav" to="/post">add</router-link>
-            <router-link class="material-icons nav" to="">favorite_border</router-link>
-            <router-link class="material-icons nav" to="/profile">account_circle</router-link>
-        </footer>
-    </div>
-  </template>
+  <div id="app" class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <!-- Top Fixed Navigation -->
+    <header class="mdl-layout__header" >
+      <div class="mdl-layout__header-row">
+        <router-link class="material-icons" to="/post">camera_alt</router-link>
+        <span><router-link class="mdl-layout-title" id="title" to="/">Jigolie</router-link></span>
+        <router-link class="material-icons" id="send" style="float:right;" to="/post">send</router-link>
+      </div>
+    </header>
+    <!-- Top Fixed Navigation -->
+    <!-- Main Content -->
+    <main class="mdl-layout__content">
+      <div class="page-content">
+        <transition name="page" mode="in-out">
+          <router-view></router-view>
+        </transition>
+      </div>
+    </main>
+    <!-- Main Content -->
+    <!-- Bottom Fixed Navigation -->
+    <footer class="mdl-mega-footer">
+        <router-link class="material-icons nav" to="/">home</router-link>
+        <router-link class="material-icons nav" to="/search">search</router-link>
+        <router-link class="material-icons nav" to="/post">add</router-link>
+        <router-link class="material-icons nav" to="">favorite_border</router-link>
+        <router-link class="material-icons nav" to="/profile">account_circle</router-link>
+    </footer>
+    <!-- Bottom Fixed Navigation -->
+  </div>
+</template>
 
 <script>
-  require('material-design-lite')
+  require('material-design-lite') //require node module
   export default {
   name: 'default',
   methods: {
@@ -38,12 +41,15 @@
 </script>
 
 <style>
+  /* import external stylesheets */
   @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
   @import url('https://code.getmdl.io/1.2.1/material.blue-red.min.css');
   @import url('https://fonts.googleapis.com/css?family=Lobster');
 
+  /* Apply scoped styles */
+
   .mdl-grid {
-    margin-top: 50px;
+    margin-top: 75px;
     z-index: -999;
     bottom: 0;
     top: 0;
