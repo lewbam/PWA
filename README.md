@@ -3,7 +3,7 @@
 
 # Jigolie
 
-Hosted at progressivewebapp-1997.firebaseapp.com
+Hosted at jigolie.com
 
 > A Vue.js project
 
